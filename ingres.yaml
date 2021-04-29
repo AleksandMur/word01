@@ -1,0 +1,19 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-sa2
+  namespace: project
+spec:
+  backend:
+    serviceName: default-http-backend
+    servicePort: 80
+  rules:
+  - host: word.k8s-17.sa
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: wordpress-balancer
+          servicePort: 80
+
