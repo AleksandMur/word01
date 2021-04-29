@@ -2,24 +2,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wordpress01
+  name: wordpress02
   namespace: project
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wordpress01
+      app: wordpress02
   template:
     metadata:
       labels:
-        app: wordpress01
+        app: wordpress02
     spec:
       containers:
-        - name: wordpress01
-          image: wordpress:5-php7.1-apache
+        - name: wordpress02
+          image: wordpress:5.4-php7.1-apache
           ports:
           - containerPort: 80
-            name: wordpress01
           volumeMounts:
             - name: wordpress-data
               mountPath: /var/www
@@ -38,12 +37,12 @@ spec:
       volumes:
         - name: wordpress-data
           persistentVolumeClaim:
-            claimName: wordpress-volume01
+            claimName: wordpress-volume02
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: wordpress-balancer
+  name: wordpress-balancer02
   namespace: project
 spec:
   type: LoadBalancer
@@ -52,6 +51,6 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: wordpress01
+    app: wordpress02
 
 

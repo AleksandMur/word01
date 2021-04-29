@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: nfs-word01
+  name: nfs-word02
 spec:
   capacity:
     storage: 2Gi
@@ -10,4 +10,4 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   nfs:
     server: 192.168.37.105
-    path: "/mnt/IT-Academy/nfs-data/sa2-16-21/amurygin/word01"
+    path: "/mnt/IT-Academy/nfs-data/sa2-16-21/amurygin/word02"

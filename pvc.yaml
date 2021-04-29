@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: wordpress-volume01
+  name: wordpress-volume02
   namespace: project
 spec:
   volumeMode: Filesystem
@@ -10,7 +10,7 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  volumeName: "nfs-word01"
+  volumeName: "nfs-word02"
   storageClassName: ""
 
 
