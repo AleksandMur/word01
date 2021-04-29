@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: wordpress02
-          image: wordpress:5.2-php7.1-apache
+          image: wordpress:5.4-php7.2-apache
           ports:
           - containerPort: 80
           volumeMounts:
