@@ -24,7 +24,7 @@
 
 ## Automation tools: Kubectl
 
-## Github
+## Kubeval Github
 
 
 
