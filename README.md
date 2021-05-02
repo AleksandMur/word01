@@ -5,7 +5,8 @@
  Wordpress
 
  Mysql
-
+ 
+ Programming language: PHP SQL
 
 
 ```
@@ -24,7 +25,9 @@
 
 ## Automation tools: Kubectl
 
-## Kubeval Github
+## CSM: Github
+
+## CI description: test by kubeval
 
 
 
